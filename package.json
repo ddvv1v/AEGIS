@@ -28,6 +28,15 @@
     "login",
     "theme"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddvv1v/AEGIS.git"
+  },
+  "homepage": "https://github.com/ddvv1v/AEGIS#readme",
+  "bugs": {
+    "url": "https://github.com/ddvv1v/AEGIS/issues"
+  },
+
   "engines": {
     "node": ">=20"
   },
