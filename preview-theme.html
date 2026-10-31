@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>aegis theme preview</title>
+<style>html,body{margin:0;height:100%;background:#050810}#root{height:100%}</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  const q = new URLSearchParams(location.search)
+  globalThis.__AEGIS_BOOT__ = {
+    name: 'DEEPSEEK CORE',
+    subtitle: 'AEGIS TERMINAL · 2026',
+    welcome: 'ADMINISTRATOR',
+    passcode: 'show me the money',
+    theme: q.get('theme') || 'holo',
+    voice: false,
+  }
+</script>
+<script src="lib/splash.js"></script>
+<script>
+  setTimeout(() => {
+    const root = document.getElementById('deepseek-boot')
+    if (!root) return
+    const force = document.createElement('style')
+    force.textContent = '.ub-stage{opacity:1!important;transition:none!important}.ub-check{animation:none!important;stroke-dashoffset:0!important}.ub-shield-inner{animation:none!important;opacity:1!important}'
+    document.head.append(force)
+    root.classList.add('is-booted', 'is-command')
+    const hint = root.querySelector('.ub-cmd-hint')
+    if (hint) hint.textContent = 'SECURITY CLEARANCE REQUIRED · 输入口令后回车'
+  }, 300)
+</script>
+</body>
+</html>
+

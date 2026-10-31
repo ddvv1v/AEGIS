@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+
+# logs
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# local archives
+*.tgz
+*.zip
+
+# previews that are not part of the plugin
+preview-*.html

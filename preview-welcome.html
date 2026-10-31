@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>aegis welcome preview</title>
+<style>html,body{margin:0;height:100%;background:#050810}#root{height:100%}</style>
+</head>
+<body>
+<div id="root"></div>
+<script>globalThis.__RHINE_SPLASH__ = { enabled: true, replayOnReload: true }</script>
+<script src="lib/splash.js"></script>
+<script>
+  setTimeout(() => {
+    const root = document.getElementById('deepseek-boot')
+    if (!root) return
+    const force = document.createElement('style')
+    force.textContent = [
+      '.ub-stage{opacity:.08!important;transition:none!important}',
+      '.ub-welcome{opacity:1!important;transition:none!important}',
+      '.ub-welcome-in{animation:none!important}',
+      '.ub-flash{display:none!important}',
+    ].join('')
+    document.head.append(force)
+    root.classList.add('is-booted', 'is-welcome')
+    const time = root.querySelector('.ub-welcome-time')
+    if (time) time.textContent = '2026-10-29 01:52:07'
+  }, 500)
+</script>
+</body>
+</html>
